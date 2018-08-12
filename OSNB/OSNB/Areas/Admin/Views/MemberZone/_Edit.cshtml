@@ -1,0 +1,70 @@
+﻿@model OSNB.ViewModels.MemberZoneViewModel
+@using (Ajax.BeginForm("Edit", "MemberZone", null,
+        new AjaxOptions
+        {
+            UpdateTargetId = "updateTargetId",
+            InsertionMode = InsertionMode.Replace,
+            HttpMethod = "POST",
+            OnSuccess = "EditMemberZoneSuccess",
+        }, new { @id = "editMemberZoneForm" }))
+{
+    <div id="memberZoneEditPage">
+        @Html.ValidationSummary(true)
+        <!-- Error Container -->
+        <div class="row-fluid">
+            <div class="span12">
+                <div id="updateTargetId" class="error">
+                </div>
+            </div>
+        </div>
+        <!-- ZoneName -->
+        <div class="row-fluid">
+            <div class="span4">
+                <div class="control-label">
+                    @Html.LabelFor(model => model.ZoneName)
+                </div>
+            </div>
+            <div class="span8">
+                @Html.TextBoxFor(x => x.ZoneName)
+                @Html.HiddenFor(x => x.Id)
+            </div>
+            @Html.ValidationMessageFor(x => x.ZoneName)
+        </div>
+        <!-- LocationX -->
+        <div class="row-fluid">
+            <div class="span4">
+                <div class="control-label">
+                    @Html.LabelFor(model => model.LocationX)
+                </div>
+            </div>
+            <div class="span8">
+                @Html.TextBoxFor(x => x.LocationX)
+            </div>
+            @Html.ValidationMessageFor(x => x.LocationX)
+        </div>
+        <!-- LocationY -->
+        <div class="row-fluid">
+            <div class="span4">
+                <div class="control-label">
+                    @Html.LabelFor(model => model.LocationY)
+                </div>
+            </div>
+            <div class="span8">
+                @Html.TextBoxFor(x => x.LocationY)
+            </div>
+            @Html.ValidationMessageFor(x => x.LocationY)
+        </div>
+        <!-- MemberDistrictName -->
+        <div class="row-fluid">
+            <div class="span4">
+                <div class="control-label">
+                    @Html.LabelFor(model => model.MemberDistrictId)
+                </div>
+            </div>
+            <div class="span8">
+                @Html.DropDownList("MemberDistrictId", Model.ddlMemberDistricts)
+            </div>
+            @Html.ValidationMessageFor(x => x.MemberDistrictId)
+        </div>
+    </div>
+}

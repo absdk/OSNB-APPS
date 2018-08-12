@@ -1,0 +1,39 @@
+﻿@model OSNB.ViewModels.MemberZoneViewModel
+@{
+    ViewBag.Title = "Zone Wise Member List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div id="zoneInfoPage">
+    <input type="hidden" name="ZoneId" id="ZoneId" value="@Model.Id" />
+    <div class="row-fluid" id="zoneInfoDataTableZone">
+        <table id="zoneInfoDataTable" class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>
+                        Full Name
+                    </th>
+                    <th>
+                        Address
+                    </th>
+                    <th>
+                        Date Of Birth
+                    </th>
+                    <th>
+                        Phone Number
+                    </th>
+                    <th>
+                        Mobile Number
+                    </th>
+                    <th>
+                        Actions
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <div id="sendEmailDonarDailog" title="Send Email To Donar">
+    </div>
+</div>
+<script src="@Url.Content("~/Scripts/App/zoneinfo-jq.js")" type="text/javascript"></script>

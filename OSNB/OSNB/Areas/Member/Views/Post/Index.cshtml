@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div id="postIndexPage">
+    <div class="row-fluid">
+        <a href="@Url.Action("Add", "Post")" id="lnkAddPost" class="btn btn-primary">
+            <icon class="icon-plus-sign icon-white"></icon>
+            Add Post</a>
+    </div>
+    <div class="row-fluid" id="postDataTableZone">
+        <table id="postDataTable" class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>
+                        Title
+                    </th>
+                    <th>
+                        Content
+                    </th>
+                    <th>
+                        Create Date
+                    </th>
+                    <th>
+                        User Name
+                    </th>
+                    <th>
+                        Actions
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <div id="addPostDialog" title="Add Post">
+    </div>
+    <div id="editPostDialog" title="Edit Post">
+    </div>
+    <div id="deletePostDailog" title="Delete Post">
+    </div>
+    <div id="detailsPostDialog" title="Details Post">
+    </div>
+</div>
+<script src="@Url.Content("~/Scripts/App/memberpost-jq.js")" type="text/javascript"></script>

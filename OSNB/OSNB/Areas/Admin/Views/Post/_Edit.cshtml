@@ -1,0 +1,67 @@
+﻿@model OSNB.ViewModels.PostViewModel
+@using (Ajax.BeginForm("Edit", "Post", null,
+        new AjaxOptions
+        {
+            UpdateTargetId = "updateTargetId",
+            InsertionMode = InsertionMode.Replace,
+            HttpMethod = "POST",
+            OnSuccess = "EditPostSuccess",
+        }, new { @id = "editPostForm" }))
+{
+    <div id="postEditPage">
+        @Html.ValidationSummary(true)
+        <!-- Error Container -->
+        <div class="row-fluid">
+            <div class="span12">
+                <div id="updateTargetId" class="error">
+                </div>
+            </div>
+        </div>
+        <!-- Title -->
+        <div class="row-fluid">
+            <div class="span4">
+                <div class="control-label">
+                    @Html.LabelFor(model => model.Title)
+                </div>
+            </div>
+            <div class="span8">
+                @Html.TextBoxFor(x => x.Title)
+                @Html.HiddenFor(x => x.Id)
+            </div>
+            @Html.ValidationMessageFor(x => x.Title)
+        </div>
+        <!-- Content -->
+        <div class="row-fluid">
+            <div class="span4">
+                <div class="control-label">
+                    @Html.LabelFor(model => model.Content)
+                </div>
+            </div>
+            <div class="span8">
+                @Html.TextBoxFor(x => x.Content)
+            </div>
+            @Html.ValidationMessageFor(x => x.Content)
+        </div>
+        <!-- CreateDate -->
+        <div class="row-fluid">
+            <div class="span4">
+                <div class="control-label">
+                    @Html.LabelFor(model => model.CreateDate)
+                </div>
+            </div>
+            <div class="span8">
+                @Html.TextBoxFor(x => x.CreateDate, new { @class = "datePicker" })
+            </div>
+            @Html.ValidationMessageFor(x => x.CreateDate)
+        </div>
+    </div>
+}
+<script type="text/javascript">
+    $(function () {
+        $(".datePicker").datepicker({
+            //        showOn: "button",
+            //        buttonImage: "/Content/Images/App/calendar.gif",
+            //        buttonImageOnly: true
+        });
+    });
+</script>

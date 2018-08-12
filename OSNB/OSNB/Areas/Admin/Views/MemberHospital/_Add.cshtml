@@ -1,0 +1,81 @@
+﻿@model OSNB.ViewModels.MemberHospitalViewModel
+@using (Ajax.BeginForm("Add", "MemberHospital", null,
+        new AjaxOptions
+        {
+            UpdateTargetId = "updateTargetId",
+            InsertionMode = InsertionMode.Replace,
+            HttpMethod = "POST",
+            OnSuccess = "AddMemberHospitalSuccess",
+        }, new { @id = "addMemberHospitalForm" }))
+{
+    <div id="memberHospitalAddPage">
+        @Html.ValidationSummary(true)
+        <!-- Error Container -->
+        <div class="row-fluid">
+            <div class="span12">
+                <div id="updateTargetId" class="error">
+                </div>
+            </div>
+        </div>
+        <!-- HospitalName -->
+        <div class="row-fluid">
+            <div class="span4">
+                <div class="control-label">
+                    @Html.LabelFor(model => model.HospitalName)
+                </div>
+            </div>
+            <div class="span8">
+                @Html.TextBoxFor(x => x.HospitalName)
+            </div>
+            @Html.ValidationMessageFor(x => x.HospitalName)
+        </div>
+        <!-- Address -->
+        <div class="row-fluid">
+            <div class="span4">
+                <div class="control-label">
+                    @Html.LabelFor(model => model.Address)
+                </div>
+            </div>
+            <div class="span8">
+                @Html.TextAreaFor(x => x.Address)
+            </div>
+            @Html.ValidationMessageFor(x => x.Address)
+        </div>
+        <!-- LocationX -->
+        <div class="row-fluid">
+            <div class="span4">
+                <div class="control-label">
+                    @Html.LabelFor(model => model.LocationX)
+                </div>
+            </div>
+            <div class="span8">
+                @Html.TextBoxFor(x => x.LocationX)
+            </div>
+            @Html.ValidationMessageFor(x => x.LocationX)
+        </div>
+        <!-- LocationY -->
+        <div class="row-fluid">
+            <div class="span4">
+                <div class="control-label">
+                    @Html.LabelFor(model => model.LocationY)
+                </div>
+            </div>
+            <div class="span8">
+                @Html.TextBoxFor(x => x.LocationY)
+            </div>
+            @Html.ValidationMessageFor(x => x.LocationY)
+        </div>
+        <!-- MemberZoneId -->
+        <div class="row-fluid">
+            <div class="span4">
+                <div class="control-label">
+                    @Html.LabelFor(model => model.MemberZoneId)
+                </div>
+            </div>
+            <div class="span8">
+                @Html.DropDownList("MemberZoneId", Model.ddlMemberZones)
+            </div>
+            @Html.ValidationMessageFor(x => x.MemberZoneId)
+        </div>
+    </div>
+}

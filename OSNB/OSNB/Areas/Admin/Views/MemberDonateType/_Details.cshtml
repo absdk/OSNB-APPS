@@ -1,0 +1,14 @@
+﻿@model OSNB.ViewModels.MemberDonateTypeViewModel
+<div id="memberDonateTypeDetailsPage">
+    <!-- DonateTypeName -->
+    <div class="row-fluid">
+        <div class="span4">
+            <div class="control-label">
+                @Html.LabelFor(model => model.DonateTypeName)
+            </div>
+        </div>
+        <div class="span8">
+            @Html.DisplayFor(x => x.DonateTypeName)
+        </div>
+    </div>
+</div>

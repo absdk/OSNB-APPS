@@ -1,0 +1,14 @@
+﻿@model OSNB.ViewModels.MemberDistrictViewModel
+<div id="memberDistrictDetailsPage">
+    <!-- DistrictName -->
+    <div class="row-fluid">
+        <div class="span4">
+            <div class="control-label">
+                @Html.LabelFor(model => model.DistrictName)
+            </div>
+        </div>
+        <div class="span8">
+            @Html.DisplayFor(x => x.DistrictName)
+        </div>
+    </div>
+</div>

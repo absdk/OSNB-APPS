@@ -1,0 +1,58 @@
+﻿@model OSNB.ViewModels.MemberViewModel
+@using (Ajax.BeginForm("Edit", "Member", null,
+        new AjaxOptions
+        {
+            UpdateTargetId = "updateTargetId",
+            InsertionMode = InsertionMode.Replace,
+            HttpMethod = "POST",
+            OnSuccess = "EditMemberSuccess",
+        }, new { @id = "editMemberForm" }))
+{
+    <div id="memberEditPage">
+        @Html.ValidationSummary(true)
+        <!-- Error Container -->
+        <div class="row-fluid">
+            <div class="span12">
+                <div id="updateTargetId" class="error">
+                </div>
+            </div>
+        </div>
+        <!-- FirstName -->
+        <div class="row-fluid">
+            <div class="span4">
+                <div class="control-label">
+                    @Html.LabelFor(model => model.FirstName)
+                </div>
+            </div>
+            <div class="span8">
+                @Html.TextBoxFor(x => x.FirstName)
+                @Html.HiddenFor(x => x.Id)
+            </div>
+            @Html.ValidationMessageFor(x => x.FirstName)
+        </div>
+        <!-- LastName -->
+        <div class="row-fluid">
+            <div class="span4">
+                <div class="control-label">
+                    @Html.LabelFor(model => model.LastName)
+                </div>
+            </div>
+            <div class="span8">
+                @Html.TextBoxFor(x => x.LastName)
+            </div>
+            @Html.ValidationMessageFor(x => x.LastName)
+        </div>
+        <!-- Address -->
+        <div class="row-fluid">
+            <div class="span4">
+                <div class="control-label">
+                    @Html.LabelFor(model => model.Address)
+                </div>
+            </div>
+            <div class="span8">
+                @Html.TextBoxFor(x => x.Address)
+            </div>
+            @Html.ValidationMessageFor(x => x.Address)
+        </div>
+    </div>
+}

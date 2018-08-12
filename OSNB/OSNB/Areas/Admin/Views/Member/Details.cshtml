@@ -1,0 +1,98 @@
+﻿@model OSNB.ViewModels.CreateOrEditMemberViewModel
+@{
+    ViewBag.Title = "Detail Member";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div id="memberDetailPage">
+    <div class="row-fluid">
+        <h3>
+            Details Member
+        </h3>
+    </div>
+    <div class="row-fluid">
+        <fieldset>
+            <legend>User Information:</legend>
+            <div class="span3">
+                @Html.LabelFor(model => model.UserName)
+                @Html.DisplayFor(x => x.UserName)
+            </div>
+            <div class="span3">
+                @Html.LabelFor(model => model.UserEmail)
+                @Html.DisplayFor(x => x.UserEmail)
+            </div>
+        </fieldset>
+    </div>
+    <div class="row-fluid">
+        <fieldset>
+            <legend>Member Information:</legend>
+            <div class="row-fluid span12">
+                <div class="span4">
+                    @Html.LabelFor(model => model.FirstName)
+                    @Html.DisplayFor(x => x.FirstName)
+                </div>
+                <div class="span4">
+                    @Html.LabelFor(model => model.LastName)
+                    @Html.DisplayFor(x => x.LastName)
+                </div>
+                <div class="span4">
+                    @Html.LabelFor(model => model.SurName)
+                    @Html.DisplayFor(x => x.SurName)
+                </div>
+            </div>
+            <div class="row-fluid span12">
+                <div class="span4">
+                    @Html.LabelFor(model => model.DateOfBirth)
+                    @Html.DisplayFor(x => x.DateOfBirth)
+                </div>
+                <div class="span4">
+                    @Html.LabelFor(model => model.Address)
+                    @Html.DisplayFor(x => x.Address)
+                </div>
+                <div class="span4">
+                    @Html.LabelFor(model => model.ImageFile)
+                    <img src="@Model.ThumbImageUrl" width="80px" height="80px" alt="Profile Image" />
+                </div>
+            </div>
+            <div class="row-fluid span12">
+                <div class="span4">
+                    @Html.LabelFor(model => model.PhoneNumber)
+                    @Html.DisplayFor(x => x.PhoneNumber)
+                </div>
+                <div class="span4">
+                    @Html.LabelFor(model => model.MobileNumber)
+                    @Html.DisplayFor(x => x.MobileNumber)
+                </div>
+                <div class="span4">
+                    @Html.LabelFor(model => model.Email)
+                    @Html.DisplayFor(x => x.Email)
+                </div>
+            </div>
+            <div class="row-fluid span12">
+                <div class="span4">
+                    @Html.LabelFor(model => model.MemberBloodGroupName)
+                    @Html.DisplayFor(model => model.MemberBloodGroupName)
+                </div>
+                @*<div class="span4">
+                    @Html.LabelFor(model => model.MemberDistrictName)
+                    @Html.DisplayFor(model => model.MemberDistrictName)
+                </div>*@
+                <div class="span4">
+                    @Html.LabelFor(model => model.MemberZoneName)
+                    @Html.DisplayFor(model => model.MemberZoneName)
+                </div>
+                <div class="span4">
+                    @Html.LabelFor(model => model.MemberHospitalName)
+                    @Html.DisplayFor(model => model.MemberHospitalName)
+                </div>
+            </div>
+        </fieldset>
+    </div>
+    <br />
+    <div class="row-fluid span12">
+        <div class="span3 pull-right">
+            <a href="/Admin/Member/Index" id="lnkMemeberBack" name="lnkMemeberBack" class="btn btn-success btn-small">
+                <icon class="icon-arrow-left icon-white"></icon>
+                Back</a>
+        </div>
+    </div>
+</div>

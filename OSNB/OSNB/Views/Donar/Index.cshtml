@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Donars List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div id="donarIndexPage">
+    <div class="row-fluid" id="donarDataTableZone">
+        <table id="donarDataTable" class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>
+                        Full Name
+                    </th>
+                    <th>
+                        Address
+                    </th>
+                    <th>
+                        Blood Group
+                    </th>
+                    <th>
+                        Date Of Birth
+                    </th>
+                    <th>
+                        Phone Number
+                    </th>
+                    <th>
+                        Mobile Number
+                    </th>
+                    <th>
+                        Actions
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <div id="sendEmailDonarDailog" title="Send Email To Donar">
+    </div>
+</div>
+<script src="@Url.Content("~/Scripts/App/donar-jq.js")" type="text/javascript"></script>

@@ -1,0 +1,83 @@
+﻿@model OSNB.ViewModels.UserViewModel
+@using (Ajax.BeginForm("Add", "User", null,
+        new AjaxOptions
+        {
+            UpdateTargetId = "updateTargetId",
+            InsertionMode = InsertionMode.Replace,
+            HttpMethod = "POST",
+            OnSuccess = "AddUserSuccess",
+        }, new { @id = "addUserForm" }))
+{
+    <div id="userAddPage">
+        @Html.ValidationSummary(true)
+        <!-- Error Container -->
+        <div class="row-fluid">
+            <div class="span12">
+                <div id="updateTargetId" class="error">
+                </div>
+            </div>
+        </div>
+        <!-- UserName -->
+        <div class="row-fluid">
+            <div class="span4">
+                <div class="control-label">
+                    @Html.LabelFor(model => model.UserName)
+                </div>
+            </div>
+            <div class="span8">
+                @Html.TextBoxFor(x => x.UserName)
+            </div>
+            @Html.ValidationMessageFor(x => x.UserName)
+        </div>
+        <!-- Email -->
+        <div class="row-fluid">
+            <div class="span4">
+                <div class="control-label">
+                    @Html.LabelFor(model => model.Email)
+                </div>
+            </div>
+            <div class="span8">
+                @Html.TextBoxFor(x => x.Email)
+            </div>
+            @Html.ValidationMessageFor(x => x.Email)
+        </div>
+        <!-- Password -->
+        <div class="row-fluid">
+            <div class="span4">
+                <div class="control-label">
+                    @Html.LabelFor(model => model.Password)
+                </div>
+            </div>
+            <div class="span8">
+                @Html.PasswordFor(x => x.Password)
+            </div>
+            @Html.ValidationMessageFor(x => x.Password)
+        </div>
+        <!-- ConfirmPassword -->
+        <div class="row-fluid">
+            <div class="span4">
+                <div class="control-label">
+                    @Html.LabelFor(model => model.ConfirmPassword)
+                </div>
+            </div>
+            <div class="span8">
+                @Html.PasswordFor(x => x.ConfirmPassword)
+            </div>
+            @Html.ValidationMessageFor(x => x.ConfirmPassword)
+        </div>
+        <!-- RoleName -->
+        <div class="row-fluid">
+            @foreach (var role in Model.Roles)
+            {
+                <div class="span3">
+                    <label class="checkbox" for="usr-@role.RoleName">
+                        <input type="checkbox" id="usr-@role.RoleName" 
+                                   name="RoleName" 
+                                   value="@role.RoleName" @(Html.Raw(role.IsAssigned ? "checked=\"checked\"" : ""))  />
+                        @role.RoleName
+                    </label>
+                </div>
+            }
+        </div>
+    </div>
+}

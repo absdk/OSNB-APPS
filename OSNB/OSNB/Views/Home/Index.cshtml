@@ -1,0 +1,96 @@
+﻿@model OSNB.ViewModels.HomePageViewModel
+@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div id="homePage" class="row-fluid">
+    <div id="homePageMapZone">
+        <div class="switch-board clearfix">
+            <div class="row-fluid">
+                <div class="span3">
+                    <div class="row-fluid">
+                        <img src="../../Content/Images/App/dhakacity.png" usemap="#green" border="0">
+                        <map name="green">
+                            <area title="Uttara" id="zoneUttara" href="/Home/ZoneDetails/Uttara" shape="poly" coords="26, 49, 25, 41, 27, 35, 23, 31, 27, 25, 24, 20, 30, 19, 33, 13, 39, 11, 46, 8, 49, 9, 58, 4, 64, 7, 67, 13, 72, 16, 71, 22, 72, 27, 76, 27, 79, 25, 86, 25, 92, 25, 99, 19, 103, 18, 114, 9, 124, 1, 132, 3, 139, 7, 145, 7, 150, 7, 152, 13, 153, 23, 153, 25, 155, 31, 159, 36, 164, 41, 167, 47, 170, 51, 168, 57, 167, 65, 165, 67, 161, 71, 156, 67, 150, 69, 142, 69, 135, 65, 128, 69, 121, 66, 115, 70, 116, 75, 117, 79, 113, 81, 106, 81, 95, 71, 89, 63, 88, 58, 79, 53, 79, 58, 76, 61, 67, 53, 62, 54, 56, 60, 51, 61, 49, 55, 49, 50, 45, 48, 41, 51, 35, 47, 30, 49" />
+                            <area title="Pallabi" id="zonePallabi" href="/Home/ZoneDetails/Pallabi" shape="poly" coords="26, 50, 31, 50, 35, 48, 39, 50, 45, 50, 49, 49, 49, 58, 52, 63, 57, 62, 61, 58, 64, 51, 68, 53, 67, 58, 72, 64, 76, 67, 79, 69, 82, 91, 79, 95, 74, 98, 62, 98, 63, 116, 47, 120, 41, 117, 29, 124, 24, 121, 25, 116, 19, 112, 13, 110, 8, 108, 10, 101, 13, 98, 7, 93, 9, 89, 9, 83, 13, 79, 7, 73, 9, 69, 20, 65, 24, 59" />
+                            <area title="Cantorment" id="zoneCantorment" href="/Home/ZoneDetails/Cantorment" shape="poly" coords="67, 55, 75, 60, 78, 61, 80, 57, 81, 53, 85, 55, 90, 59, 88, 63, 102, 77, 106, 82, 112, 83, 117, 81, 123, 85, 127, 93, 131, 97, 130, 107, 126, 108, 125, 111, 120, 112, 115, 119, 109, 117, 103, 121, 94, 118, 87, 118, 88, 125, 89, 127, 83, 131, 82, 151, 82, 160, 76, 163, 72, 165, 72, 169, 69, 169, 68, 176, 65, 176, 65, 166, 62, 164, 59, 157, 54, 157, 48, 160, 42, 156, 47, 154, 50, 150, 56, 145, 57, 130, 64, 122, 61, 101, 67, 99, 75, 99, 79, 95, 80, 89, 81, 70" />
+                            <area title="Gulshan" id="zoneGulshan" href="/Home/ZoneDetails/Gulshan" shape="poly" coords="117, 80, 115, 72, 117, 67, 121, 66, 126, 69, 129, 71, 134, 66, 138, 67, 140, 71, 141, 74, 146, 69, 150, 69, 152, 71, 155, 69, 155, 68, 158, 72, 162, 70, 166, 67, 167, 73, 170, 77, 173, 79, 173, 82, 175, 85, 179, 87, 182, 84, 185, 89, 187, 95, 185, 102, 185, 107, 183, 109, 184, 113, 183, 117, 184, 120, 181, 124, 181, 130, 180, 135, 178, 140, 170, 147, 168, 150, 169, 153, 172, 156, 176, 157, 181, 162, 183, 167, 182, 170, 182, 175, 178, 178, 170, 177, 161, 176, 156, 181, 153, 179, 141, 181, 139, 174, 134, 171, 127, 174, 119, 173, 111, 173, 103, 187, 101, 180, 98, 179, 103, 172, 99, 168, 91, 168, 81, 166, 83, 151, 83, 141, 85, 133, 88, 126, 88, 118, 96, 119, 101, 121, 108, 118, 113, 121, 119, 115, 125, 112, 128, 107, 130, 102, 131, 97" />
+                            <area title="Mirpur" id="zoneMirpur" href="/Home/ZoneDetails/Mirpur" shape="poly" coords="11, 111, 18, 112, 24, 115, 24, 119, 27, 124, 33, 123, 39, 119, 44, 119, 57, 118, 62, 115, 63, 123, 56, 129, 57, 145, 48, 150, 47, 155, 38, 162, 33, 164, 28, 160, 20, 167, 17, 172, 6, 166, 8, 162, 8, 155, 12, 149, 13, 141, 11, 136, 15, 134, 15, 127, 9, 123" />
+                            <area title="Mohammadpur" id="zoneMohammadpur" href="/Home/ZoneDetails/Mohammadpur" shape="poly" coords="3, 199, 2, 194, 5, 189, 7, 187, 10, 184, 11, 181, 13, 177, 18, 173, 18, 170, 22, 168, 25, 165, 26, 161, 30, 165, 33, 163, 37, 163, 43, 157, 46, 160, 52, 160, 56, 158, 61, 158, 61, 162, 57, 164, 49, 165, 45, 168, 45, 173, 49, 177, 55, 187, 50, 190, 45, 194, 42, 200, 35, 203, 24, 208, 20, 203, 15, 198, 9, 199" />
+                            <area title="Tajgoan" id="zoneTajgoan" href="/Home/ZoneDetails/Tajgoan" shape="poly" coords="61, 162, 47, 167, 45, 170, 50, 178, 54, 186, 59, 195, 63, 192, 67, 192, 73, 196, 76, 200, 78, 198, 80, 198, 84, 193, 87, 189, 102, 173, 102, 170, 96, 167, 90, 168, 86, 167, 81, 166, 81, 160, 76, 163, 73, 164, 72, 167, 68, 169, 70, 173, 66, 176, 65, 169, 63, 165" />
+                            <area title="Ramna" id="zoneRamna" href="/Home/ZoneDetails/Ramna" shape="poly" coords="98, 178, 104, 188, 101, 193, 99, 197, 100, 201, 102, 203, 96, 210, 96, 212, 98, 213, 96, 217, 96, 222, 97, 229, 97, 231, 85, 230, 82, 226, 78, 226, 73, 223, 71, 219, 71, 215, 77, 210, 77, 199, 81, 198, 83, 193, 86, 192" />
+                            <area title="Lalbag" id="zoneLalbag" href="/Home/ZoneDetails/Lalbag" shape="poly" coords="71, 216, 58, 223, 52, 220, 47, 218, 44, 218, 40, 219, 39, 222, 36, 225, 31, 224, 35, 231, 36, 238, 40, 246, 45, 251, 53, 253, 61, 251, 67, 252, 73, 249, 77, 248, 84, 246, 83, 240, 82, 236, 83, 232, 85, 231, 79, 226, 72, 224" />
+                            <area title="Dhanmodi" id="zoneDhanmodi" href="/Home/ZoneDetails/Dhanmodi" shape="poly" coords="55, 188, 58, 195, 60, 195, 62, 192, 68, 192, 73, 196, 76, 200, 76, 206, 74, 211, 70, 215, 63, 219, 58, 223, 54, 220, 49, 217, 44, 217, 39, 218, 38, 223, 35, 225, 30, 224, 28, 216, 26, 210, 24, 207, 30, 204, 39, 201, 46, 194" />
+                            <area title="Motijheel" id="zoneMotijheel" href="/Home/ZoneDetails/Motijheel" shape="poly" coords="101, 195, 104, 195, 108, 196, 112, 196, 115, 199, 117, 204, 117, 216, 115, 221, 118, 231, 101, 230, 99, 230, 97, 224, 98, 218, 99, 213, 101, 212, 97, 212, 103, 206, 101, 201" />
+                            <area title="Sabujbag" id="zoneSabujbag" href="/Home/ZoneDetails/Sabujbag" shape="poly" coords="101, 194, 105, 188, 106, 183, 108, 176, 112, 173, 120, 173, 124, 175, 129, 175, 130, 172, 134, 171, 136, 175, 138, 173, 141, 181, 147, 180, 150, 182, 154, 181, 157, 181, 161, 177, 167, 178, 172, 178, 175, 178, 183, 177, 185, 181, 189, 185, 187, 191, 189, 195, 191, 198, 197, 198, 196, 202, 193, 206, 195, 212, 189, 211, 182, 216, 179, 213, 160, 217, 153, 217, 149, 219, 144, 221, 140, 222, 141, 228, 133, 228, 127, 227, 119, 230, 115, 223, 116, 215, 116, 208, 116, 201, 112, 197, 105, 195" />
+                            <area title="Kotwali" id="zoneKotwali" href="/Home/ZoneDetails/Kotwali" shape="poly" coords="85, 231, 100, 231, 97, 234, 99, 241, 99, 245, 101, 249, 100, 251, 99, 254, 85, 245, 85, 242, 83, 238" />
+                            <area title="Sutrapur" id="zoneSutrapur" href="/Home/ZoneDetails/Sutrapur" shape="poly" coords="101, 231, 120, 230, 116, 236, 115, 240, 117, 245, 116, 248, 117, 253, 123, 261, 123, 264, 117, 263, 118, 271, 113, 266, 108, 261, 99, 254, 102, 249, 101, 243, 99, 235" />
+                            <area title="Demra" id="zoneDemra" href="/Home/ZoneDetails/Demra" shape="poly" coords="120, 229, 128, 228, 141, 229, 140, 224, 150, 221, 154, 217, 161, 217, 173, 215, 180, 215, 182, 217, 189, 212, 192, 210, 197, 213, 202, 214, 205, 219, 204, 225, 207, 226, 206, 230, 215, 235, 217, 238, 216, 240, 222, 245, 221, 247, 217, 249, 213, 254, 210, 250, 203, 250, 198, 255, 191, 262, 184, 264, 178, 270, 173, 272, 168, 274, 165, 278, 163, 274, 159, 279, 153, 287, 154, 293, 148, 297, 146, 291, 126, 276, 121, 277, 118, 272, 118, 264, 123, 263, 117, 252, 118, 244, 116, 238" />
+                        </map>
+                    </div>
+                    <br />
+                    <div class="row-fluid">
+                        <a id="lnkFindLocation" class="btn btn-primary" href="/Home/Map">Find Your Location</a>
+                    </div>
+                </div>
+                <div class="span2">
+                    <h4>
+                        City Zone</h4>
+                    <div id="cityZoneList">
+                        <ul>
+                            @foreach (var cZ in Model.MemberZoneViewModels)
+                            {
+                                <li><a href="/Home/ZoneInfo/@cZ.Id" class="lnkCityZone-@cZ.Id">@cZ.ZoneName</a></li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+                <div class="span2">
+                    <h4>
+                        Blood Group</h4>
+                    <div id="bloodGroupList">
+                        <ul>
+                            @foreach (var bG in Model.MemberBloodGroupViewModels)
+                            {
+                                <li><a href="/Home/BloodGroupInfo/@bG.Id" class="lnkBloodGroup-@bG.Id">@bG.BloodGroupName</a></li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+                <div class="span5 pull-right">
+                    <div id="homePageBloodRequestZone">
+                        <div class="board-widgets clearfix">
+                            @*<div class="board-widgets-head clearfix">
+                                <h4 class="pull-left">
+                                    Current Request for Blood
+                                </h4>
+                            </div>*@
+                            <div class="board-widgets-content">
+                                <table id="homePageBloodRequestDataTable" class="table table-bordered table-hover">
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                                @*<div class=''>
+                                        <div>
+                                            <strong>Requester Name</strong><span>RequesterName</span></div>
+                                        <div>
+                                            <strong>Required Blood Group</strong><span>RequiredBloodGroup</span>
+                                        </div>
+                                        <div>
+                                            <strong>Present Location</strong><span>PresentLocation</span>
+                                        </div>
+                                        <div>
+                                            <strong>Requester Contact No</strong><span>RequesterContactNo</span>
+                                        </div>
+                                   </div>*@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix">
+    </div>
+</div>
+<script src="@Url.Content("~/Scripts/App/homepage-jq.js")" type="text/javascript"></script>

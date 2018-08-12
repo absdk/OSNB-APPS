@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div id="memberDonateTypeIndexPage">
+    <div class="row-fluid">
+        <a href="@Url.Action("Add", "MemberDonateType")" id="lnkAddMemberDonateType" class="btn btn-primary">
+            <icon class="icon-plus-sign icon-white"></icon>
+            Add Donate Type</a>
+    </div>
+    <div class="row-fluid" id="memberDonateTypeDataTableZone">
+        <table id="memberDonateTypeDataTable" class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>
+                        Donate Type Name
+                    </th>
+                    <th>
+                        Actions
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <div id="addMemberDonateTypeDialog" title="Add Donate Type">
+    </div>
+    <div id="editMemberDonateTypeDialog" title="Edit Donate Type">
+    </div>
+    <div id="deleteMemberDonateTypeDailog" title="Delete Donate Type">
+    </div>
+    <div id="detailsMemberDonateTypeDialog" title="Details Donate Type">
+    </div>
+</div>
+<script src="@Url.Content("~/Scripts/App/memberdonatetype-jq.js")" type="text/javascript"></script>

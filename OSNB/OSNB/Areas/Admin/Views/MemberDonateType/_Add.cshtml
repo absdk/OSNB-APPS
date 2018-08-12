@@ -1,0 +1,33 @@
+﻿@model OSNB.ViewModels.MemberDonateTypeViewModel
+@using (Ajax.BeginForm("Add", "MemberDonateType", null,
+        new AjaxOptions
+        {
+            UpdateTargetId = "updateTargetId",
+            InsertionMode = InsertionMode.Replace,
+            HttpMethod = "POST",
+            OnSuccess = "AddMemberDonateTypeSuccess",
+        }, new { @id = "addMemberDonateTypeForm" }))
+{
+    <div id="memberDonateTypeAddPage">
+        @Html.ValidationSummary(true)
+        <!-- Error Container -->
+        <div class="row-fluid">
+            <div class="span12">
+                <div id="updateTargetId" class="error">
+                </div>
+            </div>
+        </div>
+        <!-- DonateTypeName -->
+        <div class="row-fluid">
+            <div class="span4">
+                <div class="control-label">
+                    @Html.LabelFor(model => model.DonateTypeName)
+                </div>
+            </div>
+            <div class="span8">
+                @Html.TextBoxFor(x => x.DonateTypeName)
+            </div>
+            @Html.ValidationMessageFor(x => x.DonateTypeName)
+        </div>
+    </div>
+}

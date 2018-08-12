@@ -1,0 +1,69 @@
+﻿@model OSNB.ViewModels.BloodRequestViewModel
+<div id="bloodRequestDetailsPage">
+    <!-- RequesterName -->
+    <div class="row-fluid">
+        <div class="span4">
+            <div class="control-label">
+                @Html.LabelFor(model => model.RequesterName)
+            </div>
+        </div>
+        <div class="span8">
+            @Html.DisplayFor(x => x.RequesterName)
+        </div>
+    </div>
+    <!-- RequesterContactNo -->
+    <div class="row-fluid">
+        <div class="span4">
+            <div class="control-label">
+                @Html.LabelFor(model => model.RequesterContactNo)
+            </div>
+        </div>
+        <div class="span8">
+            @Html.DisplayFor(x => x.RequesterContactNo)
+        </div>
+    </div>
+    <!-- RequesterAmount -->
+    <div class="row-fluid">
+        <div class="span4">
+            <div class="control-label">
+                @Html.LabelFor(model => model.RequesterAmount)
+            </div>
+        </div>
+        <div class="span8">
+            @Html.DisplayFor(x => x.RequesterAmount)
+        </div>
+    </div>
+    <!-- PresentLocation -->
+    <div class="row-fluid">
+        <div class="span4">
+            <div class="control-label">
+                @Html.LabelFor(model => model.PresentLocation)
+            </div>
+        </div>
+        <div class="span8">
+            @Html.DisplayFor(x => x.PresentLocation)
+        </div>
+    </div>
+    <!-- DateOfDonation -->
+    <div class="row-fluid">
+        <div class="span4">
+            <div class="control-label">
+                @Html.LabelFor(model => model.DateOfDonation)
+            </div>
+        </div>
+        <div class="span8">
+            @Html.DisplayFor(x => x.DateOfDonation)
+        </div>
+    </div>
+    <!-- AppealMessage -->
+    <div class="row-fluid">
+        <div class="span4">
+            <div class="control-label">
+                @Html.LabelFor(model => model.AppealMessage)
+            </div>
+        </div>
+        <div class="span8">
+            @Html.DisplayFor(x => x.AppealMessage)
+        </div>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+﻿@model OSNB.ViewModels.MemberViewModel
+<div id="memberDetailsPage">
+    <!-- FirstName -->
+    <div class="row-fluid">
+        <div class="span4">
+            <div class="control-label">
+                @Html.LabelFor(model => model.FirstName)
+            </div>
+        </div>
+        <div class="span8">
+            @Html.DisplayFor(x => x.FirstName)
+        </div>
+    </div>
+    <!-- LastName -->
+    <div class="row-fluid">
+        <div class="span4">
+            <div class="control-label">
+                @Html.LabelFor(model => model.LastName)
+            </div>
+        </div>
+        <div class="span8">
+            @Html.DisplayFor(x => x.LastName)
+        </div>
+    </div>
+    <!-- Address -->
+    <div class="row-fluid">
+        <div class="span4">
+            <div class="control-label">
+                @Html.LabelFor(model => model.Address)
+            </div>
+        </div>
+        <div class="span8">
+            @Html.DisplayFor(x => x.Address)
+        </div>
+    </div>
+</div>

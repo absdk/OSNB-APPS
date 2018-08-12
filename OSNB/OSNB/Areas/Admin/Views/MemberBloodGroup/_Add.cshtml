@@ -1,0 +1,33 @@
+﻿@model OSNB.ViewModels.MemberBloodGroupViewModel
+@using (Ajax.BeginForm("Add", "MemberBloodGroup", null,
+        new AjaxOptions
+        {
+            UpdateTargetId = "updateTargetId",
+            InsertionMode = InsertionMode.Replace,
+            HttpMethod = "POST",
+            OnSuccess = "AddMemberBloodGroupSuccess",
+        }, new { @id = "addMemberBloodGroupForm" }))
+{
+    <div id="memberBloodGroupAddPage">
+        @Html.ValidationSummary(true)
+        <!-- Error Container -->
+        <div class="row-fluid">
+            <div class="span12">
+                <div id="updateTargetId" class="error">
+                </div>
+            </div>
+        </div>
+        <!-- BloodGroupName -->
+        <div class="row-fluid">
+            <div class="span4">
+                <div class="control-label">
+                    @Html.LabelFor(model => model.BloodGroupName)
+                </div>
+            </div>
+            <div class="span8">
+                @Html.TextBoxFor(x => x.BloodGroupName)
+            </div>
+            @Html.ValidationMessageFor(x => x.BloodGroupName)
+        </div>
+    </div>
+}

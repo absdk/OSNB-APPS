@@ -1,0 +1,33 @@
+﻿@model OSNB.ViewModels.MemberDistrictViewModel
+@using (Ajax.BeginForm("Add", "MemberDistrict", null,
+        new AjaxOptions
+        {
+            UpdateTargetId = "updateTargetId",
+            InsertionMode = InsertionMode.Replace,
+            HttpMethod = "POST",
+            OnSuccess = "AddMemberDistrictSuccess",
+        }, new { @id = "addMemberDistrictForm" }))
+{
+    <div id="memberDistrictAddPage">
+        @Html.ValidationSummary(true)
+        <!-- Error Container -->
+        <div class="row-fluid">
+            <div class="span12">
+                <div id="updateTargetId" class="error">
+                </div>
+            </div>
+        </div>
+        <!-- DistrictName -->
+        <div class="row-fluid">
+            <div class="span4">
+                <div class="control-label">
+                    @Html.LabelFor(model => model.DistrictName)
+                </div>
+            </div>
+            <div class="span8">
+                @Html.TextBoxFor(x => x.DistrictName)
+            </div>
+            @Html.ValidationMessageFor(x => x.DistrictName)
+        </div>
+    </div>
+}

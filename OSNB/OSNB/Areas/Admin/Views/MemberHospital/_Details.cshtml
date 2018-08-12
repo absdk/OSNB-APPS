@@ -1,0 +1,58 @@
+﻿@model OSNB.ViewModels.MemberHospitalViewModel
+<div id="memberHospitalDetailsPage">
+    <!-- HospitalName -->
+    <div class="row-fluid">
+        <div class="span4">
+            <div class="control-label">
+                @Html.LabelFor(model => model.HospitalName)
+            </div>
+        </div>
+        <div class="span8">
+            @Html.DisplayFor(x => x.HospitalName)
+        </div>
+    </div>
+    <!-- Address -->
+    <div class="row-fluid">
+        <div class="span4">
+            <div class="control-label">
+                @Html.LabelFor(model => model.Address)
+            </div>
+        </div>
+        <div class="span8">
+            @Html.DisplayFor(x => x.Address)
+        </div>
+    </div>
+    <!-- LocationX -->
+    <div class="row-fluid">
+        <div class="span4">
+            <div class="control-label">
+                @Html.LabelFor(model => model.LocationX)
+            </div>
+        </div>
+        <div class="span8">
+            @Html.DisplayFor(x => x.LocationX)
+        </div>
+    </div>
+    <!-- LocationY -->
+    <div class="row-fluid">
+        <div class="span4">
+            <div class="control-label">
+                @Html.LabelFor(model => model.LocationY)
+            </div>
+        </div>
+        <div class="span8">
+            @Html.DisplayFor(x => x.LocationY)
+        </div>
+    </div>
+    <!-- MemberZoneName -->
+    <div class="row-fluid">
+        <div class="span4">
+            <div class="control-label">
+                @Html.LabelFor(model => model.MemberZoneName)
+            </div>
+        </div>
+        <div class="span8">
+            @Html.DisplayFor(x => x.MemberZoneName)
+        </div>
+    </div>
+</div>

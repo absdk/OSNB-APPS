@@ -1,0 +1,77 @@
+﻿@model OSNB.ViewModels.SendEmailInfoViewModel
+@using (Ajax.BeginForm("SendEmail", "Donar", null,
+        new AjaxOptions
+        {
+            UpdateTargetId = "updateTargetId",
+            InsertionMode = InsertionMode.Replace,
+            HttpMethod = "POST",
+            OnSuccess = "SendEmailDonarSuccess",
+        }, new { @id = "sendEmailDonarForm" }))
+{
+    <div id="memberZoneAddPage">
+        @Html.ValidationSummary(true)
+        <!-- Error Container -->
+        <div class="row-fluid">
+            <div class="span12">
+                <div id="updateTargetId" class="error">
+                </div>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span12">
+                <h4>
+                    Send Email To: @Html.DisplayFor(model => model.MemberName)
+                </h4>
+                @Html.HiddenFor(model => model.MemberViewModelId)
+            </div>
+        </div>
+        <!-- SenderName -->
+        <div class="row-fluid">
+            <div class="span4">
+                <div class="control-label">
+                    @Html.LabelFor(model => model.SenderName)
+                </div>
+            </div>
+            <div class="span8">
+                @Html.TextBoxFor(x => x.SenderName)
+            </div>
+            @Html.ValidationMessageFor(x => x.SenderName)
+        </div>
+        <!-- SenderContactNo -->
+        <div class="row-fluid">
+            <div class="span4">
+                <div class="control-label">
+                    @Html.LabelFor(model => model.SenderContactNo)
+                </div>
+            </div>
+            <div class="span8">
+                @Html.TextBoxFor(x => x.SenderContactNo)
+            </div>
+            @Html.ValidationMessageFor(x => x.SenderContactNo)
+        </div>
+        <!-- Subject -->
+        <div class="row-fluid">
+            <div class="span4">
+                <div class="control-label">
+                    @Html.LabelFor(model => model.Subject)
+                </div>
+            </div>
+            <div class="span8">
+                @Html.TextBoxFor(x => x.Subject)
+            </div>
+            @Html.ValidationMessageFor(x => x.Subject)
+        </div>
+        <!-- Message -->
+        <div class="row-fluid">
+            <div class="span4">
+                <div class="control-label">
+                    @Html.LabelFor(model => model.Message)
+                </div>
+            </div>
+            <div class="span8">
+                @Html.TextAreaFor(x => x.Message)
+            </div>
+            @Html.ValidationMessageFor(x => x.Message)
+        </div>
+    </div>
+}

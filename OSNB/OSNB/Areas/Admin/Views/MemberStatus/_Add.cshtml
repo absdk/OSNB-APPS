@@ -1,0 +1,57 @@
+﻿@model OSNB.ViewModels.MemberStatusViewModel
+@using (Ajax.BeginForm("Add", "MemberStatus", null,
+        new AjaxOptions
+        {
+            UpdateTargetId = "updateTargetId",
+            InsertionMode = InsertionMode.Replace,
+            HttpMethod = "POST",
+            OnSuccess = "AddMemberStatusSuccess",
+        }, new { @id = "addMemberStatusForm" }))
+{
+    <div id="memberStatusAddPage">
+        @Html.ValidationSummary(true)
+        <!-- Error Container -->
+        <div class="row-fluid">
+            <div class="span12">
+                <div id="updateTargetId" class="error">
+                </div>
+            </div>
+        </div>
+        <!-- MemberStatusTitle -->
+        <div class="row-fluid">
+            <div class="span4">
+                <div class="control-label">
+                    @Html.LabelFor(model => model.MemberStatusTitle)
+                </div>
+            </div>
+            <div class="span8">
+                @Html.TextBoxFor(x => x.MemberStatusTitle)
+            </div>
+            @Html.ValidationMessageFor(x => x.MemberStatusTitle)
+        </div>
+        <!-- MemberStatusDescription -->
+        <div class="row-fluid">
+            <div class="span4">
+                <div class="control-label">
+                    @Html.LabelFor(model => model.MemberStatusDescription)
+                </div>
+            </div>
+            <div class="span8">
+                @Html.TextAreaFor(x => x.MemberStatusDescription)
+            </div>
+            @Html.ValidationMessageFor(x => x.MemberStatusDescription)
+        </div>
+        <!-- MemberStatusIcon -->
+        <div class="row-fluid">
+            <div class="span4">
+                <div class="control-label">
+                    @Html.LabelFor(model => model.MemberStatusIcon)
+                </div>
+            </div>
+            <div class="span8">
+                @Html.TextBoxFor(x => x.MemberStatusIcon)
+            </div>
+            @Html.ValidationMessageFor(x => x.MemberStatusIcon)
+        </div>
+    </div>
+}

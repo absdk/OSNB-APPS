@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="OSNB.Models.Comment">
+    <Position X="0.5" Y="3.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACAgAAEAAAAAAAQACAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Models\Comment.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Post" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="OSNB.Models.MemberDonateWay">
+    <Position X="5" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Models\MemberDonateWay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OSNB.Models.MemberHospital">
+    <Position X="14.5" Y="2.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAACAAAAAAAIAAIAAAAAAAAACEAAAAAAAAAA=</HashCode>
+      <FileName>Models\MemberHospital.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MemberZone" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="OSNB.Models.Member">
+    <Position X="9.75" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AIADCEAAAAAAAIQAEAAEQIAAIAAQwAACEQAAgAAAAAg=</HashCode>
+      <FileName>Models\Member.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="User" />
+      <Property Name="MemberBloodGroup" />
+      <Property Name="MemberDonates" />
+      <Property Name="MemberStatues" />
+      <Property Name="MemberDistrict" />
+      <Property Name="MemberZone" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="OSNB.Models.MemberBloodGroup">
+    <Position X="5" Y="4" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>ABACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\MemberBloodGroup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OSNB.Models.MemberDonate">
+    <Position X="0.5" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAACABAAAAAgAAAAAAAAAQAAAAAJAAgAAgAAAIABQAA=</HashCode>
+      <FileName>Models\MemberDonate.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Member" />
+      <Property Name="MemberDonateType" />
+      <Property Name="MemberDonateWay" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="OSNB.Models.MemberStatus">
+    <Position X="15" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAIAAgABAAEAAAAAAA=</HashCode>
+      <FileName>Models\MemberStatus.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Members" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OSNB.Models.MemberZone">
+    <Position X="5.25" Y="8" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAYAIAAAAAIAAAgAAAAAAAABAAAAA=</HashCode>
+      <FileName>Models\MemberZone.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MemberDistrict" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="OSNB.Models.Post">
+    <Position X="0.5" Y="6.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAAAgAAAEAAAAAAAAAAAAAAAAAAAQABAAAAAAA=</HashCode>
+      <FileName>Models\Post.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="User" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="OSNB.Models.Role">
+    <Position X="17" Y="8.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Models\Role.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Users" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OSNB.Models.User">
+    <Position X="11.5" Y="8.25" Width="3.25" />
+    <Members>
+      <Method Name="User" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>EACAAAAEACAAAABAAAAAAQAAAiAIAAACAQAEAAEAAAA=</HashCode>
+      <FileName>Models\User.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Member" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Roles" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OSNB.Models.MemberDistrict">
+    <Position X="5" Y="5.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Models\MemberDistrict.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OSNB.Models.MemberDonateType">
+    <Position X="5" Y="2.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Models\MemberDonateType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OSNB.Models.BloodRequest">
+    <Position X="18.75" Y="0.5" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AIACAAQIAgAAAAAAACAAAAAAAAAAAEAAAAAAABABAAA=</HashCode>
+      <FileName>Models\BloodRequest.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MemberBloodGroup" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="OSNB.Models.SendEmailInfo">
+    <Position X="18" Y="5.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAIAAAQAAQAAIAAAAAAAAIAAgAAA=</HashCode>
+      <FileName>Models\SendEmailInfo.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Member" />
+    </ShowAsAssociation>
+  </Class>
+  <Interface Name="System.Collections.Generic.ICollection&lt;T&gt;" Collapsed="true">
+    <Position X="15.75" Y="6" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

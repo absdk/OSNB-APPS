@@ -1,0 +1,124 @@
+﻿@model OSNB.ViewModels.CreateOrEditMemberViewModel
+@{
+    ViewBag.Title = "Edit Member";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div id="memberEditPage">
+    @using (Html.BeginForm("Edit", "Member", null, FormMethod.Post, new { enctype = "multipart/form-data", id = "frmEditMember" }))
+    {
+        @Html.ValidationSummary(true)
+        <div class="row-fluid">
+            <h3>
+                Edit Member
+            </h3>
+        </div>
+        <div class="row-fluid">
+            <fieldset>
+                <legend>User Information:</legend>
+                <div class="span3">
+                    @Html.LabelFor(model => model.UserName)
+                    @Html.DisplayFor(x => x.UserName)
+                    @Html.HiddenFor(x => x.UserName)
+                    @Html.HiddenFor(x => x.MemberId)
+                    @Html.ValidationMessageFor(x => x.UserName)
+                </div>
+                <div class="span3">
+                    @Html.LabelFor(model => model.UserEmail)
+                    @Html.DisplayFor(x => x.UserEmail)
+                    @Html.HiddenFor(x => x.UserEmail)
+                    @Html.ValidationMessageFor(x => x.UserEmail)
+                </div>
+            </fieldset>
+        </div>
+        <div class="row-fluid">
+            <fieldset>
+                <legend>Member Information:</legend>
+                <div class="row-fluid span12">
+                    <div class="span4">
+                        @Html.LabelFor(model => model.FirstName)
+                        @Html.TextBoxFor(x => x.FirstName)
+                        @Html.ValidationMessageFor(x => x.FirstName)
+                    </div>
+                    <div class="span4">
+                        @Html.LabelFor(model => model.LastName)
+                        @Html.TextBoxFor(x => x.LastName)
+                        @Html.ValidationMessageFor(x => x.LastName)
+                    </div>
+                    <div class="span4">
+                        @Html.LabelFor(model => model.SurName)
+                        @Html.TextBoxFor(x => x.SurName)
+                        @Html.ValidationMessageFor(x => x.SurName)
+                    </div>
+                </div>
+                <div class="row-fluid span12">
+                    <div class="span4">
+                        @Html.LabelFor(model => model.DateOfBirth)
+                        @Html.TextBoxFor(x => x.DateOfBirth, new { @class = "datePicker" })
+                        @Html.ValidationMessageFor(x => x.DateOfBirth)
+                    </div>
+                    <div class="span4">
+                        @Html.LabelFor(model => model.Address)
+                        @Html.TextAreaFor(x => x.Address)
+                        @Html.ValidationMessageFor(x => x.Address)
+                    </div>
+                    <div class="span4">
+                        @Html.LabelFor(model => model.ImageFile)
+                        @Html.TextBoxFor(model => model.ImageFile, new { type = "file" })
+                        @*<input type="file" name="ImageFile" id="ImageFile" value=" " />*@
+                        @Html.ValidationMessageFor(x => x.ImageFile)
+                    </div>
+                </div>
+                <div class="row-fluid span12">
+                    <div class="span4">
+                        @Html.LabelFor(model => model.PhoneNumber)
+                        @Html.TextBoxFor(x => x.PhoneNumber)
+                        @Html.ValidationMessageFor(x => x.PhoneNumber)
+                    </div>
+                    <div class="span4">
+                        @Html.LabelFor(model => model.MobileNumber)
+                        @Html.TextBoxFor(x => x.MobileNumber)
+                        @Html.ValidationMessageFor(x => x.MobileNumber)
+                    </div>
+                    <div class="span4">
+                        @Html.LabelFor(model => model.Email)
+                        @Html.TextBoxFor(x => x.Email)
+                        @Html.ValidationMessageFor(x => x.Email)
+                    </div>
+                </div>
+                <div class="row-fluid span12">
+                    <div class="span4">
+                        @Html.LabelFor(model => model.MemberBloodGroupId)
+                        @Html.DropDownList("MemberBloodGroupId", Model.ddlMemberBloodGroups)
+                        @Html.ValidationMessageFor(x => x.MemberBloodGroupId)
+                    </div>
+                    @*<div class="span4">
+                    @Html.LabelFor(model => model.MemberDistrictId)
+                    @Html.DropDownList("MemberDistrictId", Model.ddlMemberDistricts)
+                    @Html.ValidationMessageFor(x => x.MemberDistrictId)
+                </div>*@
+                    <div class="span4">
+                        @Html.LabelFor(model => model.MemberZoneId)
+                        @Html.DropDownList("MemberZoneId", Model.ddlMemberZones)
+                        @Html.ValidationMessageFor(x => x.MemberZoneId)
+                    </div>
+                    <div class="span4">
+                        @Html.LabelFor(model => model.MemberHospitalId)
+                        @Html.DropDownList("MemberHospitalId", Model.ddlMemberHospitals)
+                        @Html.ValidationMessageFor(x => x.MemberHospitalId)
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+        <br />
+        <div class="row-fluid span12">
+            <div class="span3 pull-right">
+                <button type="submit" id="btnMemberSubmit" name="btnMemberSubmit" class="btn btn-success btn-small">
+                    <icon class="icon-hdd icon-white"></icon>
+                    Submit</button>
+                <button type="reset" id="btnMemeberReset" name="btnMemeberReset" class="btn btn-success btn-small">
+                    <icon class="icon-refresh icon-white"></icon>
+                    Reset</button>
+            </div>
+        </div>
+    }
+</div>

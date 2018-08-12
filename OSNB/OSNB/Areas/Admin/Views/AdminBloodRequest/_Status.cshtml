@@ -1,0 +1,46 @@
+﻿@model OSNB.ViewModels.BloodRequestViewModel
+@using (Ajax.BeginForm("Status", "AdminBloodRequest", null,
+        new AjaxOptions
+        {
+            UpdateTargetId = "updateTargetId",
+            InsertionMode = InsertionMode.Replace,
+            HttpMethod = "POST",
+            OnSuccess = "StatusAdminBloodRequestSuccess",
+        }, new { @id = "statusAdminBloodRequestForm" }))
+{
+    <div id="AdminBloodRequestStatusPage">
+        @Html.ValidationSummary(true)
+        <!-- Error Container -->
+        <div class="row-fluid">
+            <div class="span12">
+                <div id="updateTargetId" class="error">
+                </div>
+            </div>
+        </div>
+        <!-- RequesterStatus -->
+        <div class="row-fluid">
+            <div class="span4">
+                <div class="control-label">
+                    @Html.LabelFor(model => model.RequesterStatus)
+                </div>
+            </div>
+            <div class="span8">
+                @Html.TextBoxFor(x => x.RequesterStatus)
+                @Html.HiddenFor(x => x.BloodRequestId)
+            </div>
+            @Html.ValidationMessageFor(x => x.RequesterStatus)
+        </div>
+        <!-- RequesterStatusMessage -->
+        <div class="row-fluid">
+            <div class="span4">
+                <div class="control-label">
+                    @Html.LabelFor(model => model.RequesterStatusMessage)
+                </div>
+            </div>
+            <div class="span8">
+                @Html.TextBoxFor(x => x.RequesterStatusMessage)
+            </div>
+            @Html.ValidationMessageFor(x => x.RequesterStatusMessage)
+        </div>
+    </div>
+}

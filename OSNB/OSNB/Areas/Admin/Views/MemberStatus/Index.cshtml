@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div id="memberStatusIndexPage">
+    <div class="row-fluid">
+        <a href="@Url.Action("Add", "MemberStatus")" id="lnkAddMemberStatus" class="btn btn-primary">
+            <icon class="icon-plus-sign icon-white"></icon>
+            Add Status</a>
+    </div>
+    <div class="row-fluid" id="memberStatusDataTableStatus">
+        <table id="memberStatusDataTable" class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>
+                        Status Title
+                    </th>
+                    <th>
+                        Status Description
+                    </th>
+                    <th>
+                        Status Icon
+                    </th>
+                    <th>
+                        Actions
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <div id="addMemberStatusDialog" title="Add Status">
+    </div>
+    <div id="editMemberStatusDialog" title="Edit Status">
+    </div>
+    <div id="deleteMemberStatusDailog" title="Delete Status">
+    </div>
+    <div id="detailsMemberStatusDialog" title="Details Status">
+    </div>
+</div>
+<script src="@Url.Content("~/Scripts/App/memberstatus-jq.js")" type="text/javascript"></script>

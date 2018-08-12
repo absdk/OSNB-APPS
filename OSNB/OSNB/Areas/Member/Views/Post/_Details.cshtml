@@ -1,0 +1,25 @@
+﻿@model OSNB.ViewModels.PostViewModel
+<div id="postDetailsPage">
+    <!-- Title -->
+    <div class="row-fluid">
+        <div class="span4">
+            <div class="control-label">
+                @Html.LabelFor(model => model.Title)
+            </div>
+        </div>
+        <div class="span8">
+            @Html.DisplayFor(x => x.Title)
+        </div>
+    </div>
+    <!-- Content -->
+    <div class="row-fluid">
+        <div class="span4">
+            <div class="control-label">
+                @Html.LabelFor(model => model.Content)
+            </div>
+        </div>
+        <div class="span8">
+            @Html.DisplayFor(x => x.Content)
+        </div>
+    </div>
+</div>

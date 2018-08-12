@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div id="userIndexPage">
+    <div class="row-fluid">
+        <a href="@Url.Action("Add", "User")" id="lnkAddUser" class="btn btn-primary">
+            <icon class="icon-plus-sign icon-white"></icon>
+            Add User</a>
+    </div>
+    <div class="row-fluid" id="userDataTableZone">
+        <table id="userDataTable" class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>
+                        Roles
+                    </th>
+                    <th>
+                        User Name
+                    </th>
+                    <th>
+                        User Email
+                    </th>
+                    <th>
+                        Approve Status
+                    </th>
+                    <th>
+                        Actions
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <div id="addUserDialog" title="Add User">
+    </div>
+    <div id="editUserDialog" title="Edit User">
+    </div>
+    <div id="deleteUserDailog" title="Delete User">
+    </div>
+    <div id="detailsUserDialog" title="Details User">
+    </div>
+    <div id="assignRoleUserDialog" title="Assign Role">
+    </div>
+</div>
+<script src="@Url.Content("~/Scripts/App/user-jq.js")" type="text/javascript"></script>

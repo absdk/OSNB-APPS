@@ -1,0 +1,39 @@
+﻿@model OSNB.ViewModels.MemberBloodGroupViewModel
+@{
+    ViewBag.Title = "Blood Group Wise Member List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div id="bloodGroupInfoPage">
+    <input type="hidden" name="BloodGroupId" id="BloodGroupId" value="@Model.Id" />
+    <div class="row-fluid" id="bloodGroupInfoDataTableZone">
+        <table id="bloodGroupInfoDataTable" class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>
+                        Full Name
+                    </th>
+                    <th>
+                        Address
+                    </th>
+                    <th>
+                        Date Of Birth
+                    </th>
+                    <th>
+                        Phone Number
+                    </th>
+                    <th>
+                        Mobile Number
+                    </th>
+                    <th>
+                        Actions
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <div id="sendEmailDonarDailog" title="Send Email To Donar">
+    </div>
+</div>
+<script src="@Url.Content("~/Scripts/App/bloodgroupinfo-jq.js")" type="text/javascript"></script>

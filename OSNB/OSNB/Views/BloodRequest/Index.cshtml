@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "Blood Request List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div id="bloodRequestIndexPage">
+    <div class="row-fluid" id="bloodRequestDataTableZone">
+        <table id="bloodRequestDataTable" class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>
+                        Requester Name
+                    </th>
+                    <th>
+                        Requester ContactNo
+                    </th>
+                    <th>
+                        Requester Amount
+                    </th>
+                    <th>
+                        Present Location
+                    </th>
+                    <th>
+                        Date Of Donation
+                    </th>
+                    <th>
+                        Required Blood
+                    </th>
+                    <th>
+                        Required Stutas
+                    </th>
+                    <th>
+                        Actions
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <div id="detailsBloodRequestDialog" title="Details Of Blood Requests">
+    </div>
+</div>
+<script src="@Url.Content("~/Scripts/App/bloodrequest-jq.js")" type="text/javascript"></script>

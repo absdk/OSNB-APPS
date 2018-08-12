@@ -1,0 +1,118 @@
+﻿@model OSNB.ViewModels.BloodRequestViewModel
+@{
+    ViewBag.Title = "Request For Blood";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div id="memberAddPage">
+    @using (Html.BeginForm("ForBlood", "BloodRequest"))
+    {
+        
+        @Html.ValidationSummary(true)
+        
+        <div class="row-fluid">
+            <div class="span12">
+                <h3>
+                    Request For Blood
+                </h3>
+            </div>
+        </div>
+        <!-- RequesterName -->
+        <div class="row-fluid">
+            <div class="span4">
+                <div class="control-label">
+                    @Html.LabelFor(model => model.RequesterName)
+                </div>
+            </div>
+            <div class="span8">
+                @Html.TextBoxFor(x => x.RequesterName)
+            </div>
+            @Html.ValidationMessageFor(x => x.RequesterName)
+        </div>
+        <!-- RequesterContactNo -->
+        <div class="row-fluid">
+            <div class="span4">
+                <div class="control-label">
+                    @Html.LabelFor(model => model.RequesterContactNo)
+                </div>
+            </div>
+            <div class="span8">
+                @Html.TextBoxFor(x => x.RequesterContactNo)
+            </div>
+            @Html.ValidationMessageFor(x => x.RequesterContactNo)
+        </div>
+        <!-- RequiredBloodGroupId -->
+        <div class="row-fluid">
+            <div class="span4">
+                <div class="control-label">
+                    @Html.LabelFor(model => model.RequiredBloodGroupId)
+                </div>
+            </div>
+            <div class="span8">
+                @Html.DropDownList("RequiredBloodGroupId", Model.ddlMemberBloodGroups)
+            </div>
+            @Html.ValidationMessageFor(x => x.RequiredBloodGroupId)
+        </div>
+        <!-- RequesterAmount -->
+        <div class="row-fluid">
+            <div class="span4">
+                <div class="control-label">
+                    @Html.LabelFor(model => model.RequesterAmount)
+                </div>
+            </div>
+            <div class="span8">
+                @Html.TextBoxFor(x => x.RequesterAmount)
+            </div>
+            @Html.ValidationMessageFor(x => x.RequesterAmount)
+        </div>
+        <!-- PresentLocation -->
+        <div class="row-fluid">
+            <div class="span4">
+                <div class="control-label">
+                    @Html.LabelFor(model => model.PresentLocation)
+                </div>
+            </div>
+            <div class="span8">
+                @Html.TextAreaFor(x => x.PresentLocation)
+            </div>
+            @Html.ValidationMessageFor(x => x.PresentLocation)
+        </div>
+        
+        <!-- DateOfDonation -->
+        <div class="row-fluid">
+            <div class="span4">
+                <div class="control-label">
+                    @Html.LabelFor(model => model.DateOfDonation)
+                </div>
+            </div>
+            <div class="span8">
+                @Html.TextBoxFor(x => x.DateOfDonation, new { @class = "datePicker" })
+            </div>
+            @Html.ValidationMessageFor(x => x.DateOfDonation)
+        </div>
+        
+        <!-- AppealMessage -->
+        <div class="row-fluid">
+            <div class="span4">
+                <div class="control-label">
+                    @Html.LabelFor(model => model.AppealMessage)
+                </div>
+            </div>
+            <div class="span8">
+                @Html.TextAreaFor(x => x.AppealMessage)
+            </div>
+            @Html.ValidationMessageFor(x => x.AppealMessage)
+        </div>
+        
+        <br />
+        <div class="row-fluid span12">
+            <div class="span3 pull-right">
+                <button type="submit" id="btnMemberSubmit" name="btnMemberSubmit" class="btn btn-success btn-small">
+                    <icon class="icon-hdd icon-white"></icon>
+                    Submit</button>
+                <button type="reset" id="btnMemeberReset" name="btnMemeberReset" class="btn btn-success btn-small">
+                    <icon class="icon-refresh icon-white"></icon>
+                    Reset</button>
+            </div>
+        </div>
+    }
+</div>

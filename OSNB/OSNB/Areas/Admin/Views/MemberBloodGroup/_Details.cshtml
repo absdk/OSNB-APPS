@@ -1,0 +1,14 @@
+﻿@model OSNB.ViewModels.MemberBloodGroupViewModel
+<div id="memberBloodGroupDetailsPage">
+    <!-- BloodGroupName -->
+    <div class="row-fluid">
+        <div class="span4">
+            <div class="control-label">
+                @Html.LabelFor(model => model.BloodGroupName)
+            </div>
+        </div>
+        <div class="span8">
+            @Html.DisplayFor(x => x.BloodGroupName)
+        </div>
+    </div>
+</div>

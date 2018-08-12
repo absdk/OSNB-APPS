@@ -1,0 +1,10 @@
+﻿@if (Request.IsAuthenticated)
+{
+    <text>Welcome <strong>@User.Identity.Name</strong>! <a href="@Url.Action("LogOff", "Account", new { area = "" }, null)" class="btn">
+        Log Off</a>
+    </text>
+}
+else
+{
+    @: <a href="@Url.Action("Register", "Account", new { area = "" }, null)" class="btn">Register</a>&nbsp;&nbsp;&nbsp;<a href="@Url.Action("LogOn", "Account", new { area = "" }, null)"class="btn">Log On</a>
+}

@@ -1,0 +1,36 @@
+﻿@model OSNB.ViewModels.MemberStatusViewModel
+<div id="memberStatusDetailsPage">
+    <!-- MemberStatusTitle -->
+    <div class="row-fluid">
+        <div class="span4">
+            <div class="control-label">
+                @Html.LabelFor(model => model.MemberStatusTitle)
+            </div>
+        </div>
+        <div class="span8">
+            @Html.DisplayFor(x => x.MemberStatusTitle)
+        </div>
+    </div>
+    <!-- MemberStatusDescription -->
+    <div class="row-fluid">
+        <div class="span4">
+            <div class="control-label">
+                @Html.LabelFor(model => model.MemberStatusDescription)
+            </div>
+        </div>
+        <div class="span8">
+            @Html.DisplayFor(x => x.MemberStatusDescription)
+        </div>
+    </div>
+    <!-- MemberStatusIcon -->
+    <div class="row-fluid">
+        <div class="span4">
+            <div class="control-label">
+                @Html.LabelFor(model => model.MemberStatusIcon)
+            </div>
+        </div>
+        <div class="span8">
+            @Html.DisplayFor(x => x.MemberStatusIcon)
+        </div>
+    </div>
+</div>
